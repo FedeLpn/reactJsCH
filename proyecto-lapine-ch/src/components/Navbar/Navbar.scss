@@ -4,7 +4,7 @@
   background: #252932;
   margin-bottom: 20px;
 
-&__logo {
+.header__logo {
   color: #f2f2f2;
   font-size: 35px;
   line-height: 140px;
@@ -12,13 +12,13 @@
   padding-left: 5%;
 }
 
-&__navbar {
+.header__navbar {
   float: right;
   line-height: 200px;
   padding-right: 5%;
 }
 
-&__navlink {
+.header__navlink {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -31,7 +31,7 @@
   transition: all 500ms ease;
 }
 
-&__navlink:hover {
+.header__navlink:hover {
   background: #f56f3a;
   border-radius: 50px;
 }
