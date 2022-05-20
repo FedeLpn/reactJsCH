@@ -3,9 +3,8 @@
   overflow: hidden; /* Eliminamos errores de float */
   background: #252932;
   margin-bottom: 20px;
-}
 
-.header__logo {
+&__logo {
   color: #f2f2f2;
   font-size: 35px;
   line-height: 140px;
@@ -13,13 +12,13 @@
   padding-left: 5%;
 }
 
-.header__navbar {
+&__navbar {
   float: right;
   line-height: 200px;
   padding-right: 5%;
 }
 
-.header__navlink {
+&__navlink {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -32,7 +31,8 @@
   transition: all 500ms ease;
 }
 
-.header__navlink:hover {
+&__navlink:hover {
   background: #f56f3a;
   border-radius: 50px;
+}
 }
