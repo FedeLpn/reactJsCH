@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar/Navbar';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { Grilla } from './components/Grilla/Grilla';
 
 function App() {
 
@@ -11,7 +12,11 @@ function App() {
     <div className="App">
       <Navbar />
       <ItemListContainer nombre={usuario.nombre} />
+      <Grilla />
+      <Grilla />
+      <Grilla />
     </div>
+
   );
 }
 
