@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Counter.scss'
 
 export const Counter = () => {
 
@@ -6,18 +7,28 @@ export const Counter = () => {
 
     const incrementar = () => {
 
-        setContador(contador + 1)
+        for (let i = contador; i < 10; i++) {
+
+            setContador(contador + 1)
+        }
     }
 
     const restar = () => {
 
-        setContador(contador - 1)
+        for (let i = contador; i > 0; i--) {
+
+            setContador(contador - 1)
+        }
     }
 
     return (
-        <div className="container my-5" >
+        <div className="container" >
             <h2> Producto </h2>
-            <p> Cantidad {contador}</p> <p onClick={incrementar}>Añadir +</p> <p onClick={restar}>Quitar -</p>
+            <div className="flex-parent">
+                <div className="flex-item" onClick={restar}>Quitar -</div>
+                <div className="flex-item"> Cantidad: {contador}</div>
+                <div className="flex-item" onClick={incrementar}>Añadir +</div>
+            </div>
 
         </div>
     )

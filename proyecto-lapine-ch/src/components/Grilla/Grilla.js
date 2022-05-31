@@ -4,11 +4,11 @@ import { Counter } from '../Counter/Counter';
 export const Grilla = () => {
     return (
         <section>
-            <div class="parent">
-                <div class="div1"> <Counter /> </div>
-                <div class="div2"> <Counter /> </div>
-                <div class="div3"> <Counter /> </div>
-                <div class="div4"> <Counter /> </div>
+            <div className="parent">
+                <div className="div1"> <Counter /> </div>
+                <div className="div2"> <Counter /> </div>
+                <div className="div3"> <Counter /> </div>
+                <div className="div4"> <Counter /> </div>
             </div>
         </section>
     )
