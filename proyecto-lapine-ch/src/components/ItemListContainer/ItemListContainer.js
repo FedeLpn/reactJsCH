@@ -1,3 +1,4 @@
+import { ItemList } from "../ItemList/ItemList";
 
 export const ItemListContainer = ({ nombre }) => {
     return (
@@ -5,7 +6,7 @@ export const ItemListContainer = ({ nombre }) => {
 
             <h3>Bienvenido {nombre}</h3>
             <p>Puedes seleccionar entre varios de nuestros productos a continuacion: </p>
-
+            <ItemList />
         </section>
     )
 }

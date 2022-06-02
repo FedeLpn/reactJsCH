@@ -23,7 +23,6 @@ export const Counter = () => {
 
     return (
         <div className="container" >
-            <h2> Producto </h2>
             <div className="flex-parent">
                 <div className="flex-item" onClick={restar}>Quitar -</div>
                 <div className="flex-item"> Cantidad: {contador}</div>

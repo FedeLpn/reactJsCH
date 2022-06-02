@@ -1,4 +1,4 @@
-import './Grilla.scss'
+/*import './Grilla.scss'
 import { Counter } from '../Counter/Counter';
 
 export const Grilla = () => {
@@ -12,4 +12,4 @@ export const Grilla = () => {
             </div>
         </section>
     )
-}
+}*/
