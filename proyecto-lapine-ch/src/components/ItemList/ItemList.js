@@ -37,11 +37,17 @@ export const ItemList = () => {
                         <img className='imgSize' src={item.img} alt="productosVendidos"></img>
                         <p>{item.description}</p>
                         <h4>Precio: ${item.precio}</h4>
-                        <Counter />
+                        <a href='/detalle'> Mas Info</a>
+                        <div>
+                            <p>
+                                <Counter />
+                            </p>
+                        </div>
+                        <hr />
                     </div>
                 ))
             }
 
-        </section>
+        </section >
     )
 }

@@ -10,9 +10,10 @@ export const Navbar = () => {
                 </h1>
 
                 <nav className="header__navbar">
-                    <p className="header__navlink"> Ofertas del dia </p>
-                    <p className="header__navlink"> Productos </p>
-                    <p className="header__navlink"> Contacto </p>
+                    <a href='/productos' className="header__navlink"> Inicio </a>
+                    <a href='/OfertasDelDia' className="header__navlink"> Ofertas del dia </a>
+                    <a href='/productos' className="header__navlink"> Productos </a>
+                    <a href='/Contacto' className="header__navlink"> Contacto </a>
                     <p className="header__navlink"><CartWidget /></p>
                 </nav>
             </div>
