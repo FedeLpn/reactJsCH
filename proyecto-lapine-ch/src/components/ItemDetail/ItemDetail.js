@@ -51,3 +51,9 @@ export const ItemDetail = () => {
         </section>
     )
 }
+
+/*console.log(items.map(el) => ({
+    id: el.id,
+    nombre: el.nombre})
+    )
+ */
