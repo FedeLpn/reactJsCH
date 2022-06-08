@@ -9,9 +9,9 @@ const IndItem = ({ item }) => {
             <h4>Precio: ${item.precio}</h4>
             <a href='/detalle'> Mas Info</a>
             <div>
-                <p>
-                    <Counter />
-                </p>
+
+                <Counter />
+
             </div>
             <hr />
         </div >

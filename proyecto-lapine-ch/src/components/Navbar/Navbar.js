@@ -14,7 +14,7 @@ export const Navbar = () => {
                     <a href='/OfertasDelDia' className="header__navlink"> Ofertas del dia </a>
                     <a href='/productos' className="header__navlink"> Productos </a>
                     <a href='/Contacto' className="header__navlink"> Contacto </a>
-                    <p className="header__navlink"><CartWidget /></p>
+                    <a href='/' className="header__navlink"><CartWidget /></a>
                 </nav>
             </div>
         </header>
