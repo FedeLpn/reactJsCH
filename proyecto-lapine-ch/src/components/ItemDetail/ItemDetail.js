@@ -56,4 +56,6 @@ export const ItemDetail = () => {
     id: el.id,
     nombre: el.nombre})
     )
+
+    items.map((item) => item.id)
  */

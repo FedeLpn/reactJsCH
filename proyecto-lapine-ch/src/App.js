@@ -16,7 +16,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path='/productos' element={<ItemListContainer nombre={usuario.nombre} />}></Route>
+          <Route path='/' element={<ItemListContainer nombre={usuario.nombre} />}></Route>
           <Route path='/productos' element={<ItemListContainer nombre={usuario.nombre} />}></Route>
           <Route path='/detalle' element={<ItemDetailContainer nombre={usuario.nombre} />}></Route>
 

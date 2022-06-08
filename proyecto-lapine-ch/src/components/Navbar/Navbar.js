@@ -10,7 +10,7 @@ export const Navbar = () => {
                 </h1>
 
                 <nav className="header__navbar">
-                    <a href='/productos' className="header__navlink"> Inicio </a>
+                    <a href='/' className="header__navlink"> Inicio </a>
                     <a href='/OfertasDelDia' className="header__navlink"> Ofertas del dia </a>
                     <a href='/productos' className="header__navlink"> Productos </a>
                     <a href='/Contacto' className="header__navlink"> Contacto </a>
