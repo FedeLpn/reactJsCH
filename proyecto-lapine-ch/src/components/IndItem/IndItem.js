@@ -7,7 +7,6 @@ const IndItem = ({ item }) => {
             <img className='imgSize' src={item.img} alt="productosVendidos"></img>
             <p>{item.description}</p>
             <h4>Precio: ${item.precio}</h4>
-            <a href='/detalle'> Mas Info</a>
             <div>
 
                 <Counter />

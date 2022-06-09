@@ -3,9 +3,13 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import productos from '../Item/Item'
 
+
+
 export const ItemListContainer = ({ nombre }) => {
 
     const [items, setItems] = useState([])
+
+
 
     const pedirDatos = () => {
 
@@ -31,6 +35,7 @@ export const ItemListContainer = ({ nombre }) => {
 
             <h3>Bienvenido {nombre}</h3>
             <p>Puedes seleccionar entre varios de nuestros productos a continuacion: </p>
+
             <ItemList items={items} />
         </section>
     )
