@@ -13,10 +13,10 @@ export const Navbar = () => {
 
                 <nav className="header__navbar">
                     <Link to={"/"} className="header__navlink"> Inicio </Link>
-                    <Link to={"/OfertasDelDia"} className="header__navlink"> Ofertas del dia </Link>
                     <Link to={"/productos"} className="header__navlink"> Productos </Link>
                     <Link to={"/Contacto"} className="header__navlink"> Contacto </Link>
-                    <Link to={"/"} className="header__navlink"><CartWidget /></Link>
+                    <Link to={"/cart"} className="header__navlink"><CartWidget /></Link>
+                    <Link to={"/cart"} className="header__navlink"> Terminar compra </Link>
                 </nav>
 
             </div>

@@ -1,0 +1,10 @@
+.padre {
+    width: 100%; /* Establecemos que el header abarque el 100% del documento */
+    overflow: hidden; /* Eliminamos errores de float */
+    margin-bottom: 40px;
+}
+
+.prod__navlink:hover {
+    background: #66f53a;
+    border-radius: 60px;
+}

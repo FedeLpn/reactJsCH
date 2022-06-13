@@ -1,23 +1,23 @@
-import { useState } from "react"
-import './Counter.scss'
+import './Counter.scss';
 
-export const Counter = () => {
 
-    const [contador, setContador] = useState(1)
+export const Counter = ({ max, setCounter, counter, handleAgregar }) => {
+
+
 
     const incrementar = () => {
 
-        for (let i = contador; i < 10; i++) {
+        for (let i = counter; i < max; i++) {
 
-            setContador(contador + 1)
+            setCounter(counter + 1)
         }
     }
 
     const restar = () => {
 
-        for (let i = contador; i > 0; i--) {
+        for (let i = counter; i > 0; i--) {
 
-            setContador(contador - 1)
+            setCounter(counter - 1)
         }
     }
 
@@ -25,9 +25,12 @@ export const Counter = () => {
         <div className="container" >
             <div className="flex-parent">
                 <div className="flex-item" onClick={restar}>Quitar -</div>
-                <div className="flex-item"> Cantidad: {contador}</div>
+                <div className="flex-item"> Cantidad: {counter}</div>
                 <div className="flex-item" onClick={incrementar}>Añadir +</div>
+                <button onClick={handleAgregar}>Agregar al carrito</button>
+
             </div>
+
 
         </div>
     )
