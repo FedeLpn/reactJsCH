@@ -32,11 +32,12 @@ export const ItemListContainer = ({ nombre }) => {
 
     return (
         <section>
+            <div className="container my-5">
+                <h3>Bienvenido {nombre}</h3>
+                <p>Puedes seleccionar entre varios de nuestros productos a continuacion: </p>
 
-            <h3>Bienvenido {nombre}</h3>
-            <p>Puedes seleccionar entre varios de nuestros productos a continuacion: </p>
-
-            <ItemList items={items} />
+                <ItemList items={items} />
+            </div>
         </section>
     )
 }

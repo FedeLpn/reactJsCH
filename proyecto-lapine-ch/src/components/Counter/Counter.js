@@ -23,7 +23,7 @@ export const Counter = ({ max, setCounter, counter, handleAgregar }) => {
     }
 
     return (
-        <div className="container" >
+        <div className="container my-5" >
             <div className="flex-parent">
                 <div className="flex-item" onClick={restar}>Quitar -</div>
                 <div className="flex-item"> Cantidad: {counter}</div>
