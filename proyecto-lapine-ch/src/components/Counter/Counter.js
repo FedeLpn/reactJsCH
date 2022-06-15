@@ -1,6 +1,7 @@
 import './Counter.scss';
 
 
+
 export const Counter = ({ max, setCounter, counter, handleAgregar }) => {
 
 
@@ -27,7 +28,9 @@ export const Counter = ({ max, setCounter, counter, handleAgregar }) => {
                 <div className="flex-item" onClick={restar}>Quitar -</div>
                 <div className="flex-item"> Cantidad: {counter}</div>
                 <div className="flex-item" onClick={incrementar}>Añadir +</div>
-                <button onClick={handleAgregar}>Agregar al carrito</button>
+                <button onClick={handleAgregar} className="flex-item">Agregar al carrito</button>
+
+
 
             </div>
 
