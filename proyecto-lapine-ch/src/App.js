@@ -6,6 +6,7 @@ import { CartContext } from './components/CartContext/CartContext';
 import { useState } from 'react';
 import Contacto from './components/Contacto/Contacto';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -24,8 +25,12 @@ function App() {
     return cart.some((prod) => prod.id === id)
   }
 
+  const totalPrice = () => {
+    return cart.reduce((acc, prod) => acc += (prod.precio * prod.cantidad), 0)
+  }
+
   return (
-    <CartContext.Provider value={{ cart, addItem, isInCart }}>
+    <CartContext.Provider value={{ cart, addItem, isInCart, totalPrice }}>
 
       <BrowserRouter>
         <div className="App">
@@ -37,7 +42,7 @@ function App() {
             <Route path='/categoria/:categoryId' element={<ItemDetailContainer nombre={usuario.nombre} />}></Route>
             <Route path='/detalle' element={<ItemDetailContainer nombre={usuario.nombre} />}></Route>
             <Route path='/Contacto' element={<Contacto nombre={usuario.nombre} />}></Route>
-
+            <Route path='/cart' element={<Cart />}></Route>
           </Routes>
 
         </div>
