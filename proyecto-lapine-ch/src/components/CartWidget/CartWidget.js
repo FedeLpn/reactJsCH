@@ -11,6 +11,7 @@ export const CartWidget = () => {
         <section>
             <BsCart3 />
             <span>{totalQuantity()}</span>
+
         </section>
     )
 }
