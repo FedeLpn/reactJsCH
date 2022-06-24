@@ -1,39 +1,42 @@
 import { ItemList } from "../ItemList/ItemList";
 import { useEffect } from 'react'
 import { useState } from 'react'
-import productos from '../Item/Item'
+import { useParams } from "react-router-dom";
+import { db } from "../firebase/config";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 
 
-export const ItemListContainer = ({ nombre }) => {
+export const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
 
+    const { categoryId } = useParams()
 
-
-    const pedirDatos = () => {
-
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 2000)
-        })
-    }
 
     useEffect(() => {
-        pedirDatos()
+
+        const productosRef = collection(db, "productos")
+        const q = categoryId ? query(productosRef, where("categoria", "==", categoryId)) : productosRef
+
+        getDocs(q)
             .then((resp) => {
-                setItems(resp)
+                const newItems = resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+
+                })
+                setItems(newItems)
             })
-            .catch((error) => {
-                console.log('Error ', error)
-            })
-    }, [])
+
+    }, [categoryId])
 
     return (
         <section>
             <div className="container my-5">
-                <h3>Bienvenido {nombre}</h3>
+                <h3>Bienvenido </h3>
                 <p>Puedes seleccionar entre varios de nuestros productos a continuacion: </p>
 
                 <ItemList items={items} />

@@ -9,11 +9,6 @@ import { CartProvider } from './components/CartContext/CartContext';
 
 
 function App() {
-
-  const usuario = {
-    nombre: 'Federico'
-  }
-
   return (
 
     <CartProvider>
@@ -23,10 +18,9 @@ function App() {
           <Navbar />
 
           <Routes>
-            <Route path='/' element={<ItemListContainer nombre={usuario.nombre} />}></Route>
-            <Route path='/productos' element={<ItemDetailContainer nombre={usuario.nombre} />}></Route>
-            <Route path='/categoria/:categoryId' element={<ItemDetailContainer nombre={usuario.nombre} />}></Route>
-            <Route path='/detalle' element={<ItemDetailContainer nombre={usuario.nombre} />}></Route>
+            <Route path='/' element={<ItemListContainer />}></Route>
+            <Route path='/productos' element={<ItemDetailContainer />}></Route>
+            <Route path='/categoria/:categoryId' element={<ItemDetailContainer />}></Route>
             <Route path='/Contacto' element={<Contacto />}></Route>
             <Route path='/cart' element={<Cart />}></Route>
           </Routes>

@@ -2,53 +2,55 @@ import { ItemList } from "../ItemList/ItemList";
 import './ItemDetailContainer.scss'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import productos from '../Item/Item'
 import { useParams } from "react-router-dom";
 import BarraProductos from "../BarraProductos/BarraProductos";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../firebase/config"
 
 
-
-export const ItemDetailContainer = ({ nombre }) => {
+export const ItemDetailContainer = () => {
 
     const [items, setItems] = useState([])
 
+    const [loading, setLoading] = useState(true)
+
     const { categoryId } = useParams()
-    console.log(categoryId)
-
-
-    const pedirDatos = () => {
-
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 2000)
-        })
-    }
 
     useEffect(() => {
-        pedirDatos()
+        //1.armar la referencia
+        const productosRef = collection(db, "productos")
+        const q = categoryId ? query(productosRef, where("categoria", "==", categoryId)) : productosRef
+        //2.llamar a Firebase con referencia anterior
+        getDocs(q)
             .then((resp) => {
-                if (!categoryId) {
-                    setItems(resp)
-                } else {
-                    setItems(resp.filter((item) => item.categoria === categoryId))
-                }
+                const newItems = resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
 
+                })
+                setItems(newItems)
             })
-            .catch((error) => {
-                console.log('Error ', error)
+            .finally(() => {
+                setLoading(false)
             })
     }, [categoryId])
 
     return (
         <section >
-
-            <div> <BarraProductos /></div>
-            <div className="centrado" >
-                <h3> {nombre} los productos son los siguientes:</h3>
-                <p> Utilice los filtros en la parte superior en el caso que quiera acotar la busqueda </p>
-                <ItemList items={items} />
-            </div>
+            {
+                loading
+                    ? <loader />
+                    :
+                    <><div> <BarraProductos /></div>
+                        <div className="centrado" >
+                            <h3> Los productos son los siguientes:</h3>
+                            <p> Utilice los filtros en la parte superior en el caso que quiera acotar la busqueda </p>
+                            <ItemList items={items} />
+                        </div>
+                    </>
+            }
         </section>
     )
 }
