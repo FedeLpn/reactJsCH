@@ -6,6 +6,7 @@ import Contacto from './components/Contacto/Contacto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './components/CartContext/CartContext';
+import Checkout from './components/Checkout/Checkout';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path='/categoria/:categoryId' element={<ItemDetailContainer />}></Route>
             <Route path='/Contacto' element={<Contacto />}></Route>
             <Route path='/cart' element={<Cart />}></Route>
+            <Route path='/checkout' element={<Checkout />}></Route>
           </Routes>
 
         </div>

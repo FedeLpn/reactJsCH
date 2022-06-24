@@ -17,6 +17,7 @@ const BarraProductos = () => {
                 <nav className="secHeader__navbar">
                     <Link to={"/categoria/remeras"} className="secHeader__navlink"> Remeras </Link>
                     <Link to={"/categoria/buzos"} className="secHeader__navlink"> Buzos </Link>
+                    <Link to={"/categoria/camperas"} className="secHeader__navlink"> Camperas </Link>
                 </nav>
 
             </div>

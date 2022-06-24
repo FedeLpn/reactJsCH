@@ -46,7 +46,6 @@ export const Navbar = () => {
                                     <Link to={"/productos"} className="header__navlink"> Productos </Link>
                                     <Link to={"/Contacto"} className="header__navlink"> Contacto </Link>
                                     <Link to={"/cart"} className="header__navlink"><CartWidget /></Link>
-                                    <Link to={"/cart"} className="header__navlink"> Terminar compra </Link>
                                 </nav>
 
                             </div>
